@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import joblib
 import sklearn
+import numoy as np
 
 # Load the dataset with a specified encoding
 data = pd.read_csv('cleaned_data_2024.csv', encoding='latin1')
