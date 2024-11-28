@@ -112,7 +112,7 @@ def machine_learning_modeling():
         # Step 3: Transform the selected ward using the encoder
         # Assuming the encoder is a OneHotEncoder and has been fitted on the same categories
         ward_encoded = encoder.transform(np.array([Ward]).reshape(-1, 1))  # Reshaping for the encoder
-        ward_encoded = ward_encoded.toarray()  # Converting sparse matrix to array (if necessary)
+        #ward_encoded = ward_encoded.toarray()  # Converting sparse matrix to array (if necessary)
 
         st.write("You selected:", ward_encoded)
       
