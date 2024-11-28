@@ -13,23 +13,37 @@ data = pd.read_csv('cleaned_data_2024.csv', encoding='latin1')
 
 # Page 1: Dashboard
 def dashboard():
+    import base64  # Import inside the function to keep scope clean
+
     st.title("Food Drive Prediction")
-    #st.image("logo.png", caption="Stakeholders", use_column_width=True)
+
+    # Encode the image as base64
+    def get_image_as_base64(image_path):
+        with open(image_path, "rb") as img_file:
+            return base64.b64encode(img_file.read()).decode("utf-8")
+
+    # Convert the image to base64
+    image_base64 = get_image_as_base64("logo.png")
+
+    # Use HTML to render the image
     st.markdown(
-    """
-    <div style="text-align: left;">
-        <img src="logo.png" alt="Logo" style="width: 150px;">
-        <p>Stakeholders</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+        f"""
+        <div style="text-align: left;">
+            <img src="data:image/png;base64,{image_base64}" alt="Logo" style="width: 150px;">
+            <p>Stakeholders</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-    
+    # Additional dashboard components (if needed)
+    st.write("Welcome to the Food Drive Prediction Dashboard!")
+    st.write("Use the menu on the left to navigate through the app.")
 
+#def dashboard():
+    #st.title("Food Drive Prediction")
+    #st.image("logo.png", caption="Stakeholders", use_column_width=True)
     
-    
-
     st.subheader("💡 Abstract:")
 
     inspiration = '''
