@@ -111,6 +111,9 @@ def machine_learning_modeling():
         # Load the trained model
         model = joblib.load('best_model.pkl')
         #model = joblib.load('best_model.sav')
+
+        # Check the input data to ensure it's correct
+        st.write("Input data for prediction:", input_data)
         
         # Prepare input data for prediction
         #input_data = [[Ward, routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route]]
