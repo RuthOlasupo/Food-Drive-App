@@ -39,10 +39,6 @@ def dashboard():
     # Additional dashboard components (if needed)
     st.write("Welcome to the Food Drive Prediction Dashboard!")
     st.write("Use the menu on the left to navigate through the app.")
-
-#def dashboard():
-    #st.title("Food Drive Prediction")
-    #st.image("logo.png", caption="Stakeholders", use_column_width=True)
     
     st.subheader("💡 Abstract:")
 
@@ -97,6 +93,8 @@ def exploratory_data_analysis():
     fig = px.histogram(data_cleaned, x='Time to Complete (min)', nbins=20, labels={'Time to Complete (min)': 'Time to Complete'})
     st.plotly_chart(fig)
 
+
+
 # Page 3: Machine Learning Modeling
 def machine_learning_modeling():
     st.title("Machine Learning Modeling")
@@ -113,6 +111,7 @@ def machine_learning_modeling():
        'Rio Vista Ward', 'Beaumont Ward', 'Wainwright Branch'))
     # Load encoder
     encoder = joblib.load('one_hot_encoder.pkl') 
+    
 
     # Step 3: Transform the selected ward using the encoder
     
@@ -159,9 +158,6 @@ def machine_learning_modeling():
         # Make prediction
         prediction = model.predict(input_data)
         
-
-        # Display the prediction and confidence interval
-        st.success(f"Predicted Donation Bags: {prediction[0]}")
         
         # Display the prediction
         st.success(f"The predicted number of donation bags is: {prediction[0]}")
