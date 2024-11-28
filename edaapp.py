@@ -117,11 +117,13 @@ def machine_learning_modeling():
         # Prepare input data for prediction
        
         input_data = np.hstack((ward_encoded, np.array([[routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route]])))
+        
 
        
       
-        # Check the input data to ensure it's correct
+        # Check t#he input data to ensure it's correct
         st.write("Input data for prediction:", (routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route))
+        st.write("You have inputted the following data for prediction:", ("Routes Completed": routes_completed, "Time spent": time_spent)
 
         # Make prediction
         prediction = model.predict(input_data)
