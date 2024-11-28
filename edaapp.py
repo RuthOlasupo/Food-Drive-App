@@ -14,7 +14,17 @@ data = pd.read_csv('cleaned_data_2024.csv', encoding='latin1')
 # Page 1: Dashboard
 def dashboard():
     st.title("Food Drive Prediction")
-    st.image("logo.png", caption="Stakeholders", use_column_width=True)
+    #st.image("logo.png", caption="Stakeholders", use_column_width=True)
+    st.markdown(
+    """
+    <div style="text-align: left;">
+        <img src="logo.png" alt="Logo" style="width: 150px;">
+        <p>Stakeholders</p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
     
 
     
@@ -136,7 +146,7 @@ def machine_learning_modeling():
         prediction = model.predict(input_data)
 
         # Display the prediction
-        st.success(f"Predicted Donation Bags: {prediction[0]}")
+        st.success(f"The predicted number of donation bags is: {prediction[0]}")
 
        
 
