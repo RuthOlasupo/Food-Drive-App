@@ -91,7 +91,7 @@ def machine_learning_modeling():
     encoder = joblib.load('one_hot_encoder.pkl') 
 
     # Step 3: Transform the selected ward using the encoder
-    # Assuming the encoder is a OneHotEncoder and has been fitted on the same categories
+    
     ward_encoded = encoder.transform(np.array([Ward]).reshape(-1, 1))  # Reshaping for the encoder
        
 
@@ -113,7 +113,9 @@ def machine_learning_modeling():
         #model = joblib.load('best_model.sav')
         
         # Prepare input data for prediction
-        input_data = [[Ward, routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route]]
+        #input_data = [[Ward, routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route]]
+        input_data = np.hstack((ward_encoded, np.array([[routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route]])))
+
 
         # Load encoder
         #encoder = joblib.load('one_hot_encoder.pkl') 
