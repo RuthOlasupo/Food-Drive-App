@@ -158,15 +158,11 @@ def machine_learning_modeling():
 
         # Make prediction
         prediction = model.predict(input_data)
-        # Calculate confidence interval (based on the individual tree predictions)
-        individual_tree_predictions = [tree.predict(input_data) for tree in model.estimators_]
-        mean_prediction = np.mean(individual_tree_predictions)
-        std_dev_prediction = np.std(individual_tree_predictions)
+        
 
         # Display the prediction and confidence interval
         st.success(f"Predicted Donation Bags: {prediction[0]}")
-        st.write(f"Estimated Range: {mean_prediction - 1.96 * std_dev_prediction:.2f} to {mean_prediction + 1.96 * std_dev_prediction:.2f} (95% Confidence Interval)")
-
+        
         # Display the prediction
         st.success(f"The predicted number of donation bags is: {prediction[0]}")
 
