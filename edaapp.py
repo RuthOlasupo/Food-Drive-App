@@ -93,7 +93,6 @@ def machine_learning_modeling():
     youth_volunteers = st.slider("Number of Youth Volunteers", 1, 50, 10)
     doors_in_route = st.slider("Number of Doors in Route", 10, 500, 100)
     
-    import streamlit as st
 
 
 
