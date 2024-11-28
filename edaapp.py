@@ -80,13 +80,22 @@ def machine_learning_modeling():
 
     # Input fields for user to enter data
     
-    Ward = st.selectbox("Please enter the ward information", ('Clareview Ward', 'Lee Ridge Ward', 'Forest Heights Ward',
+    Ward = st.selectbox("Please select the ward information", ('Clareview Ward', 'Lee Ridge Ward', 'Forest Heights Ward',
        'Silver Berry Ward', 'Crawford Plains Ward', 'Londonderry Ward',
        'Woodbend Ward', 'Blackmud Creek Ward', 'Connors Hill Ward',
        'Griesbach Ward', 'Rutherford Ward', 'Rabbit Hill Ward',
        'Namao Ward', 'Ellerslie Ward', 'Greenfield Ward',
        'Southgate Ward', 'Terwillegar Park Ward', 'Wild Rose Ward',
        'Rio Vista Ward', 'Beaumont Ward', 'Wainwright Branch'))
+    # Load encoder
+    encoder = joblib.load('one_hot_encoder.pkl') 
+
+    # Step 3: Transform the selected ward using the encoder
+    # Assuming the encoder is a OneHotEncoder and has been fitted on the same categories
+    ward_encoded = encoder.transform(np.array([Ward]).reshape(-1, 1))  # Reshaping for the encoder
+       
+
+    st.write("You selected:", Ward)
     
     routes_completed = st.slider("Routes Completed", 1, 10, 5)
     time_spent = st.slider("Time Spent (minutes)", 10, 300, 60)
@@ -107,14 +116,14 @@ def machine_learning_modeling():
         input_data = [[Ward, routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route]]
 
         # Load encoder
-        encoder = joblib.load('one_hot_encoder.pkl') 
+        #encoder = joblib.load('one_hot_encoder.pkl') 
 
         # Step 3: Transform the selected ward using the encoder
         # Assuming the encoder is a OneHotEncoder and has been fitted on the same categories
-        ward_encoded = encoder.transform(np.array([Ward]).reshape(-1, 1))  # Reshaping for the encoder
-        #ward_encoded = ward_encoded.toarray()  # Converting sparse matrix to array (if necessary)
+        #ward_encoded = encoder.transform(np.array([Ward]).reshape(-1, 1))  # Reshaping for the encoder
+       
 
-        st.write("You selected:", Ward)
+        #st.write("You selected:", Ward)
       
 
 
