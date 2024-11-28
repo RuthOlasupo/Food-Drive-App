@@ -122,10 +122,10 @@ def machine_learning_modeling():
     st.write("You selected:", Ward)
     
     routes_completed = st.slider("Routes Completed", 1, 10, 5)
-    time_spent = st.slider("Time Spent (minutes)", 10, 300, 60)
-    adult_volunteers = st.slider("Number of Adult Volunteers", 1, 50, 10)
+    time_spent = st.slider("Time Spent (minutes)", 10, 150, 60)
+    adult_volunteers = st.slider("Number of Adult Volunteers", 1, 10, 2)
     youth_volunteers = st.slider("Number of Youth Volunteers", 1, 50, 10)
-    doors_in_route = st.slider("Number of Doors in Route", 10, 500, 100)
+    doors_in_route = st.slider("Number of Doors in Route", 10, 2000, 100)
     
 
 
