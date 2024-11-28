@@ -7,12 +7,14 @@ import sklearn
 # Load the dataset with a specified encoding
 data = pd.read_csv('cleaned_data_2024.csv', encoding='latin1')
 
+
+
+
 # Page 1: Dashboard
 def dashboard():
     st.title("Food Drive Prediction")
-    #st.image("logo.png", caption="Stakeholders", use_column_width=True)
-    # Set custom width and height for the image
-    st.image("logo.png", caption="Stakeholders", width=250, height=150)
+    st.image("logo.png", caption="Stakeholders", use_column_width=True)
+    
 
     
     
