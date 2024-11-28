@@ -158,6 +158,9 @@ def machine_learning_modeling():
 
         # Make prediction
         prediction = model.predict(input_data)
+        probabilities = model.predict_proba(input_data)
+        st.write("Prediction Probabilities:")
+        st.write(f"Class Probabilities: {probabilities}")
 
         # Display the prediction
         st.success(f"The predicted number of donation bags is: {prediction[0]}")
