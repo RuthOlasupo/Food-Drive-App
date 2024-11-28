@@ -122,8 +122,15 @@ def machine_learning_modeling():
        
       
         # Check t#he input data to ensure it's correct
-        st.write("Input data for prediction:", (routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route))
-        st.write("You have inputted the following data for prediction:", ("Routes Completed": routes_completed, "Time spent": time_spent)
+        #st.write("Input data for prediction:", (routes_completed, time_spent, adult_volunteers, youth_volunteers, doors_in_route))
+        st.write("You have inputted the following data for prediction:")
+        st.write(f"- Ward: {Ward}")
+        st.write(f"- Routes Completed: {routes_completed}")
+        st.write(f"- Time Spent: {time_spent} minutes")
+        st.write(f"- Number of Adult Volunteers: {adult_volunteers}")
+        st.write(f"- Number of Youth Volunteers: {youth_volunteers}")
+        st.write(f"- Number of Doors: {doors_in_route}")
+
 
         # Make prediction
         prediction = model.predict(input_data)
