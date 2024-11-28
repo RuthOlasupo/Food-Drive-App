@@ -114,7 +114,7 @@ def machine_learning_modeling():
         ward_encoded = encoder.transform(np.array([Ward]).reshape(-1, 1))  # Reshaping for the encoder
         #ward_encoded = ward_encoded.toarray()  # Converting sparse matrix to array (if necessary)
 
-        st.write("You selected:", ward_encoded)
+        st.write("You selected:", Ward)
       
 
 
