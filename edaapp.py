@@ -60,10 +60,13 @@ def dashboard():
 
 # Page 2: Exploratory Data Analysis (EDA)
 def exploratory_data_analysis():
-
+    # Embedding  using HTML iframe
     # Link to Tableau visualization
-    tableau_url = "https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-    st.markdown(f"[View the Tableau Visualization here]({tableau_url})")
+    st.markdown("""
+    <iframe src="https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    width="640" height="480"></iframe>
+    """, unsafe_allow_html=True)
+
 
 # Page 3: Machine Learning Modeling
 def machine_learning_modeling():
@@ -138,7 +141,7 @@ def machine_learning_modeling():
 # Main App Logic
 def main():
     st.sidebar.title("Food Drive App")
-    app_page = st.sidebar.radio("Select a Page", ["Dashboard", "EDA", "ML Modeling"])
+    app_page = st.sidebar.radio("Select a Page", ["Dashboard", "Visualizations", "ML Modeling"])
 
     if app_page == "Dashboard":
         dashboard()
