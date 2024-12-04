@@ -61,13 +61,9 @@ def dashboard():
 # Page 2: Exploratory Data Analysis (EDA)
 def exploratory_data_analysis():
 
-    st.title("Exploratory Data Analysis")
-    # Embed Tableau visualization using iframe
+    # Link to Tableau visualization
     tableau_url = "https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-    st.markdown(
-        f'<iframe src="{tableau_url}" width="100%" height="600"></iframe>',
-        unsafe_allow_html=True
-    )
+    st.markdown(f"[View the Tableau Visualization here]({tableau_url})")
 
 # Page 3: Machine Learning Modeling
 def machine_learning_modeling():
