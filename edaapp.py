@@ -60,40 +60,14 @@ def dashboard():
 
 # Page 2: Exploratory Data Analysis (EDA)
 def exploratory_data_analysis():
+
     st.title("Exploratory Data Analysis")
-    # Rename columns for clarity
-    data_cleaned = data.rename(columns={
-        'date': 'Date',
-        'drop_off_location': 'Location',
-        'stake': 'Stake',
-        'route_number/name': 'Route number',
-        'time_spent_collecting_donations': 'Time to Complete (min)',
-        '#_of_adult_volunteers_who_participated_in_this_route': 'Number of Adult Volunteers',
-        '#_of_youth_volunteers_who_participated_in_this_route': 'Number of Youth Volunteers',
-        '#_of_doors_in_route': 'Number of Doors in Route',
-        '#_of_donation_bags_collected': 'Donation Bags Collected',
-        'did_you_complete_more_than_one_route': 'How many routes did you complete',
-        'Number of routes completed': 'Routes Completed',
-        'ward': 'Ward',
-        'Form Completion Time': 'Form Completion Time',
-        'Total volunteers': 'Total Volunteers'
-      
-    })
-
-    # Visualize the distribution of numerical features using Plotly
-    fig = px.histogram(data_cleaned, x='Number of Adult Volunteers', nbins=20, labels={'Number of Adult Volunteers': 'Adult Volunteers'})
-    st.plotly_chart(fig)
-
-    fig = px.histogram(data_cleaned, x='Number of Youth Volunteers', nbins=20, labels={'Number of Youth Volunteers': 'Youth Volunteers'})
-    st.plotly_chart(fig)
-
-    fig = px.histogram(data_cleaned, x='Donation Bags Collected', nbins=20, labels={'Donation Bags Collected': 'Donation Bags Collected'})
-    st.plotly_chart(fig)
-
-    fig = px.histogram(data_cleaned, x='Time to Complete (min)', nbins=20, labels={'Time to Complete (min)': 'Time to Complete'})
-    st.plotly_chart(fig)
-
-
+    # Embed Tableau visualization using iframe
+    tableau_url = "https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    st.markdown(
+        f'<iframe src="{tableau_url}" width="100%" height="600"></iframe>',
+        unsafe_allow_html=True
+    )
 
 # Page 3: Machine Learning Modeling
 def machine_learning_modeling():
