@@ -146,8 +146,7 @@ def main():
         exploratory_data_analysis()
     elif app_page == "ML Modeling":
         machine_learning_modeling()
-    elif app_page == "Data Collection":
-        data_collection()
+    
 
 if __name__ == "__main__":
     main()
