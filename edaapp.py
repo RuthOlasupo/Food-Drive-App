@@ -30,17 +30,17 @@ def dashboard():
         f"""
         <div style="text-align: left;">
             <img src="data:image/png;base64,{image_base64}" alt="Logo" style="width: 150px;">
-            <p>Stakeholders</p>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
     # Additional dashboard components (if needed)
-    st.write("Welcome to the Food Drive Prediction Dashboard!")
+    st.subheader(" 🤝 Welcome to the Food Drive Prediction Dashboard!")
+    
     st.write("Use the menu on the left to navigate through the app.")
     
-    st.subheader("💡 Abstract:")
+    st.subheader("💡 Brief:")
 
     inspiration = '''
     The Edmonton Food Drive, organized by the Church of Jesus Christ of Latter Day Saints seeks to bring the community together in a shared effort to care for those in need. Through the generosity of donations and the compassion of volunteers, they aim to provide essential food to families facing difficult times.
@@ -49,7 +49,7 @@ def dashboard():
 
     st.write(inspiration)
 
-    st.subheader("👨🏻‍💻 What our Project Does?")
+    st.subheader("👨🏻‍💻 Scope of the Project")
 
     what_it_does = '''
     The Edmonton Food Drive project initiative leverages machine learning to streamline the management of food donations in Edmonton Alberta. Its goal is to enhance the efficiency of drop off and pick up operations and optimize resource allocation leading to a more effective and impactful food drive campaign.
@@ -66,6 +66,19 @@ def exploratory_data_analysis():
     <iframe src="https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
     width="640" height="480"></iframe>
     """, unsafe_allow_html=True)
+
+
+def main():
+    st.title('Visualization of trends betwween 2023 and 2024')
+    #st.write('Here is an example of embedded LDS Londonderry Map:')
+
+    # Embedding Visualization using HTML iframe
+    st.markdown("""
+    <iframe src="https://public.tableau.com/app/profile/enkeshie.parris/viz/EDA-Demo/NoOutliersDashboard" width="640" height="480"></iframe>
+    """, unsafe_allow_html=True)
+
+if __name__ == "__main__":
+    main()
 
 
 # Page 3: Machine Learning Modeling
