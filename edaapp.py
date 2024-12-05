@@ -58,17 +58,9 @@ def dashboard():
     st.write(what_it_does)
 
 
-# Page 2: Exploratory Data Analysis (EDA)
-def exploratory_data_analysis():
-    # Embedding  using HTML iframe
-    # Link to Tableau visualization
-    st.markdown("""
-    <iframe src="https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-    width="640" height="480"></iframe>
-    """, unsafe_allow_html=True)
-# Page 2: Exploratory Data Analysis (EDA)
-def exploratory_data_analysis():
 
+# Page 2: Exploratory Data Analysis (EDA)
+def exploratory_data_analysis():
     # Set the page title
     st.title("Visualizations")
     # Embed Tableau visualization using an HTML iframe
