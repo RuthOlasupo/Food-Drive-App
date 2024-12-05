@@ -111,7 +111,7 @@ def exploratory_data_analysis():
     """, unsafe_allow_html=True)
 
 # Run the function to display the Tableau visualization
-display_tableau_viz()
+exploratory_data_analysis()
 
 # Page 3: Machine Learning Modeling
 def machine_learning_modeling():
