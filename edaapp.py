@@ -63,7 +63,7 @@ def dashboard():
 # Page 2: Exploratory Data Analysis (EDA) 
 def exploratory_data_analysis():
     # Set the page title
-    st.subheader("Visualization of trends from 2023 to 2024
+    st.subheader("Visualization of trends from 2023 to 2024")
     
     # Embed Tableau visualization using HTML iframe and JavaScript
     st.markdown(
