@@ -66,19 +66,22 @@ def exploratory_data_analysis():
     <iframe src="https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
     width="640" height="480"></iframe>
     """, unsafe_allow_html=True)
+# Page 2: Exploratory Data Analysis (EDA)
+def exploratory_data_analysis():
 
+    # Set the page title
+    st.title("Visualizations")
+    # Embed Tableau visualization using an HTML iframe
+    st.markdown(
+        """
+        <div style="text-align: center;">
+            <iframe src="https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+            width="800" height="600" style="border: none;"></iframe>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-def main():
-    st.title('Visualization of trends betwween 2023 and 2024')
-    #st.write('Here is an example of embedded LDS Londonderry Map:')
-
-    # Embedding Visualization using HTML iframe
-    st.markdown("""
-    <iframe src="https://public.tableau.com/app/profile/enkeshie.parris/viz/EDA-Demo/NoOutliersDashboard" width="640" height="480"></iframe>
-    """, unsafe_allow_html=True)
-
-if __name__ == "__main__":
-    main()
 
 
 # Page 3: Machine Learning Modeling
