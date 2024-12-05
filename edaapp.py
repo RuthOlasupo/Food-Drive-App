@@ -60,19 +60,22 @@ def dashboard():
 
 
 # Page 2: Exploratory Data Analysis (EDA)
+
+import streamlit.components.v1 as components
+
 def exploratory_data_analysis():
     # Set the page title
     st.title("Visualizations")
+
     # Embed Tableau visualization using an HTML iframe
-    st.markdown(
-        """
-        <div style="text-align: center;">
-            <iframe src="https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-            width="800" height="600" style="border: none;"></iframe>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    tableau_url = "https://public.tableau.com/views/EDA-Demo/NoOutliersDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    
+    iframe_code = f"""
+    <iframe src="{tableau_url}" width="800" height="600" style="border: none;"></iframe>
+    """
+    
+    # Use components to embed the iframe
+    components.html(iframe_code, height=600)
 
 
 
