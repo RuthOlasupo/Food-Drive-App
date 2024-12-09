@@ -9,8 +9,6 @@ import numpy as np
 data = pd.read_csv('cleaned_data_2024.csv', encoding='latin1')
 
 
-
-
 # Page 1: Dashboard
 def dashboard():
     import base64  # Import inside the function to keep scope clean
@@ -34,6 +32,8 @@ def dashboard():
         """,
         unsafe_allow_html=True,
     )
+
+    
 
     
     # Additional dashboard components (if needed)
@@ -73,6 +73,13 @@ def exploratory_data_analysis():
     unsafe_allow_html=True
 )
 
+    # Encode the image as base64
+    def get_image_as_base64(image_path):
+        with open(image_path, "rb") as img_file:
+            return base64.b64encode(img_file.read()).decode("utf-8")
+
+    # Convert the image to base64
+    image_base64 = get_image_as_base64("Visualization Dashboard.png")
 
 
 
