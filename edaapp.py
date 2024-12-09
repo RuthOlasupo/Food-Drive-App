@@ -65,25 +65,22 @@ def exploratory_data_analysis():
     import base64  # Import inside the function to keep scope clean
     # Set the page title
     st.subheader("Visualization of trends from 2023 to 2024")
-    # try new embed image
     
 
-    # Upload the PNG image
-    uploaded_image = st.file_uploader("Visualization Dashboard", type="png")
-
-    # Display the image if it's uploaded
-    if uploaded_image is not None:
-        st.image(uploaded_image, caption="Visualization")
-
-    
     # Embed Tableau visualization using HTML iframe and JavaScript
     st.markdown(
     """
-    [Click here to view the Edmonton Food Drive Analysis (2023 - 2024)](https://public.tableau.com/app/profile/enkeshie.parris/viz/EDA-Demo/NoOutliersDashboard)
+    [Click here to view the interactive Edmonton Food Drive Analysis (2023 - 2024)](https://public.tableau.com/app/profile/enkeshie.parris/viz/EDA-Demo/NoOutliersDashboard)
     """,
     unsafe_allow_html=True
 )
 
+
+    # Display the image
+    st.image("Visualization Dashboard.png", caption="Visualization")
+
+    
+   
     
 
 
