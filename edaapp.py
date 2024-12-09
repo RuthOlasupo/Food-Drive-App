@@ -57,6 +57,28 @@ def dashboard():
     '''
 
     st.write(what_it_does)
+# Page 2: Exploratory Data Analysis (EDA) 
+def exploratory_data_analysis():
+    # Set the page title
+    st.subheader("Visualization of Trends from 2023 to 2024")
+
+    # Add a link to the Tableau Dashboard
+    st.markdown(
+        """
+        [Click here to view the Edmonton Food Drive Analysis (2023 - 2024) on Tableau Public](https://public.tableau.com/app/profile/enkeshie.parris/viz/EDA-Demo/NoOutliersDashboard)
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Allow the user to upload and display the image of the Visualization Dashboard
+    uploaded_image = st.file_uploader("Upload Visualization Dashboard Image", type=["png", "jpg", "jpeg"])
+
+    if uploaded_image is not None:
+        # Display the uploaded image
+        st.image(uploaded_image, caption="Visualization Dashboard", use_column_width=True)
+    else:
+        # Display a default message or placeholder image if no image is uploaded
+        st.info("Please upload an image of the Visualization Dashboard.")
 
 
 
