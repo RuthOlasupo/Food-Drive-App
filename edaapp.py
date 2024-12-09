@@ -66,7 +66,7 @@ def exploratory_data_analysis():
     st.subheader("Visualization of trends from 2023 to 2024")
     
     # Embed Tableau visualization using HTML iframe and JavaScript
-   st.markdown(
+    st.markdown(
     """
     [View the Edmonton Food Drive - Time Series Analysis (2023 - 2024) Dashboard on Tableau Public](https://public.tableau.com/app/profile/enkeshie.parris/viz/EDA-Demo/NoOutliersDashboard)
     """,
