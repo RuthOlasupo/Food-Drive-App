@@ -64,8 +64,6 @@ def dashboard():
 def exploratory_data_analysis():
     # Set the page title
     st.subheader("Visualization of trends from 2023 to 2024")
-
-    st.write("Click on the link below to visualize the interactive dashboard)
     
     # Embed Tableau visualization using HTML iframe and JavaScript
    st.markdown(
