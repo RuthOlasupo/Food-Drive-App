@@ -57,28 +57,6 @@ def dashboard():
     '''
 
     st.write(what_it_does)
-# Page 2: Exploratory Data Analysis (EDA) 
-def exploratory_data_analysis():
-    # Set the page title
-    st.subheader("Visualization of Trends from 2023 to 2024")
-
-    # Add a link to the Tableau Dashboard
-    st.markdown(
-        """
-        [Click here to view the Edmonton Food Drive Analysis (2023 - 2024) on Tableau Public](https://public.tableau.com/app/profile/enkeshie.parris/viz/EDA-Demo/NoOutliersDashboard)
-        """,
-        unsafe_allow_html=True
-    )
-
-    # Allow the user to upload and display the image of the Visualization Dashboard
-    uploaded_image = st.file_uploader("Upload Visualization Dashboard Image", type=["png", "jpg", "jpeg"])
-
-    if uploaded_image is not None:
-        # Display the uploaded image
-        st.image(uploaded_image, caption="Visualization Dashboard", use_column_width=True)
-    else:
-        # Display a default message or placeholder image if no image is uploaded
-        st.info("Please upload an image of the Visualization Dashboard.")
 
 
 
@@ -87,6 +65,16 @@ def exploratory_data_analysis():
     import base64  # Import inside the function to keep scope clean
     # Set the page title
     st.subheader("Visualization of trends from 2023 to 2024")
+    # try new embed image
+    
+
+    # Upload the PNG image
+    uploaded_image = st.file_uploader("Visualization Dashboard", type="png")
+
+    # Display the image if it's uploaded
+    if uploaded_image is not None:
+        st.image(uploaded_image, caption="Visualization")
+
     
     # Embed Tableau visualization using HTML iframe and JavaScript
     st.markdown(
@@ -96,14 +84,7 @@ def exploratory_data_analysis():
     unsafe_allow_html=True
 )
 
-    # Encode the image as base64
-    def get_image_as_base64(image_path):
-        with open(image_path, "rb") as img_file:
-            return base64.b64encode(img_file.read()).decode("utf-8")
-
-    # Convert the image to base64
-    image_base64 = get_image_as_base64("Visualization Dashboard.png")
-
+    
 
 
 # Page 3: Machine Learning Modeling
