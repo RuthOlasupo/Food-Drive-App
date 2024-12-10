@@ -1,6 +1,6 @@
 # Edmonton Food Drive Model-Deployment 2024
 ## 📌 Project Overview  
-The **Edmonton Food Drive App** is a machine learning-powered solution designed to predict donation bag volumes and optimize route completion times for the annual food drive organized by the Church of Jesus Christ of Latter-day Saints. This application focuses on improving operational efficiency and forecasting donation outcomes to support better planning for future food drives across Edmonton's wards and stakes.  
+The **Edmonton Food Drive App** is a machine learning-powered solution designed to predict donation bag volumes for the annual food drive organized by the Church of Jesus Christ of Latter-day Saints. This application focuses on improving operational efficiency and forecasting donation outcomes to support better planning for future food drives across Edmonton's wards and stakes.  
 
 This project involves the full machine learning pipeline, including **data collection, cleaning, exploratory data analysis (EDA), model development, deployment**, and a user-friendly interface built with **Streamlit**.  
 
@@ -8,10 +8,8 @@ This project involves the full machine learning pipeline, including **data colle
 
 ## 🎯 Objectives  
 1. **Predict Donation Bag Volumes**:  
-   - Estimate the total number of donation bags per region.  
-2. **Optimize Route Completion Times**:  
-   - Identify factors influencing route times to ensure efficient resource allocation.  
-3. **Deployment**:  
+   - Estimate the total number of donation bags per region.   
+2. **Deployment**:  
    - Deliver an interactive application where stakeholders can input data and receive model predictions instantly.  
 
 ---
@@ -34,12 +32,10 @@ The dataset includes historical donation data collected from various regions in 
 - Stake and ward-specific data.  
 
 ### Key Features  
-- **Stake and Ward Locations**  
-- **Population Distribution**  
+- **Stake and Ward Locations**   
 - **Bag Collection Data (by Year)**  
-- **Volunteer Route Details (e.g., distance, time)**  
-
-*Note*: Sensitive information has been anonymized to comply with data privacy policies.  
+- **Volunteer Number and Route Details **  
+ 
 
 ---
 
@@ -51,7 +47,7 @@ The dataset includes historical donation data collected from various regions in 
 3. **Exploratory Data Analysis (EDA)**:  
    - Insights into donation patterns and route performance.  
 4. **Model Development**:  
-   - Regression models for bag prediction and route time optimization.  
+   - Regression models for bag prediction. 
 5. **Model Deployment**:  
    - Hosted on Streamlit for user interaction and visualization.  
 
