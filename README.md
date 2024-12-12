@@ -69,7 +69,7 @@ To test the app, follow these steps:
    ```  
 4. Run the Streamlit app:  
    ```bash  
-   streamlit run app.py  
+   [streamlit run app.py](https://food-drive-app-grs5tkpeyce4txjskunqme.streamlit.app/)  
    ```  
 5. Open the app in your browser and explore its features.  
 
